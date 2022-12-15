@@ -1,0 +1,34 @@
+.cart_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px;
+  border-top: 1px solid #e1e1e1;
+}
+.cart_item:last-child {
+  border-bottom: 1px solid #e1e1e1;
+}
+.cart-item_img img {
+  width: 100px;
+  height: 100px;
+}
+.product_title span {
+  color: grey;
+  font-weight: bold;
+  font-size: 14px;
+}
+.product_name {
+  max-width: 200px;
+}
+.product_name span {
+  font-weight: bold;
+}
+.quantity,
+.price,
+.close_btn {
+  font-weight: bold;
+}
+.close_btn {
+  cursor: pointer;
+  font-size: 18px;
+}

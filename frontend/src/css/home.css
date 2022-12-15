@@ -1,0 +1,124 @@
+#home {
+  /* border: 2px solid; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  /* background-color: #333; */
+  /* align-items: center; */
+  color: rgb(216, 210, 210);
+}
+.bg {
+  background-size: cover;
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-attachment: fixed; */
+  background-color: rgba(0, 0, 0, 0.65);
+  background-image: url("../assets/images/4.jpg");
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+}
+.up-btn {
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  /* background-color: aqua; */
+  position: fixed;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+
+  background: gray;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.65);
+
+  bottom: 1rem;
+  right: 1.5rem;
+  z-index: 3;
+}
+.arrow {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 20px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+}
+
+.sm {
+  /* text-align: center; */
+  width: 65%;
+  margin: 13rem auto auto auto;
+  /* border: 1px solid white; */
+}
+.sm .hh1 {
+  font-size: 3rem;
+  margin: 5px 0;
+  padding: 10px 0;
+}
+.para {
+  width: 500px;
+}
+
+@keyframes fadeImage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1100px) {
+  .sm {
+    width: 77%;
+  }
+  /* .bg {
+    width: 1100px;
+  } */
+}
+@media (max-width: 730px) {
+  .sm .hh1 {
+    /* text-align: center; */
+    font-size: 25px;
+  }
+  .para {
+    width: 100%;
+    /* text-align: center; */
+  }
+  .inc {
+    /* text-align: center; */
+  }
+}
+@media (max-width: 495px) {
+  .sm {
+    width: 84%;
+    margin-top: 10rem;
+  }
+}
+@media (max-width: 430px) {
+  /* .sm .hh1 {
+    font-size: 30px;
+  } */
+  .up-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .arrow {
+    font-size: 15px;
+  }
+  .para h3 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 340px) {
+  .sm .hh1 {
+    font-size: 25px;
+  }
+  .para h3 {
+    font-size: 14px;
+  }
+}

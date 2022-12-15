@@ -1,0 +1,129 @@
+#design {
+  padding: 13px 0;
+  /* height: 80vh; */
+  width: 100%;
+  background-color: #f3f3f3 !important;
+  text-align: center;
+}
+.photos {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+.des_h1 {
+  padding: 10px;
+}
+/* img {
+} */
+.single_ph {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 400px;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.single_ph:hover {
+  transform: scale(1.04);
+}
+/* @media (max-width: 520px) {
+  .photos {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+} */
+.model {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+  visibility: hidden;
+  transform: scale(0);
+  opacity: 0;
+  overflow: hidden;
+}
+.model img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  line-height: 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.model.open {
+  visibility: visible;
+  transform: scale(1);
+  opacity: 1;
+}
+.btn {
+  margin: 25px 20px 20px 20px;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-radius: 0;
+  border: 0.5px solid #333;
+  transition: 0.3s ease;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+}
+.btn:hover {
+  border: 0.5px solid black;
+  background-color: #f3f3f3;
+  color: #333;
+}
+/* .btn:hover {
+} */
+.close {
+  position: absolute;
+  color: white;
+  top: 1rem;
+  width: 50px !important;
+  height: 50px !important;
+  cursor: pointer;
+  right: 2rem;
+}
+@media (max-width: 875px) {
+  .single_ph {
+    height: auto;
+    /* width: auto; */
+  }
+}
+@media (max-width: 700px) {
+  .close {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  .des_h1 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 480px) {
+  .photos {
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    grid-gap: 1rem;
+  }
+  .btn {
+    padding: 10px;
+    margin: 20px 0 14px 0;
+    font-size: 12px;
+  }
+  .des_h1 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 410px) {
+  .single_ph {
+    height: auto;
+  }
+}

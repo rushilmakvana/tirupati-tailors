@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+
+.title {
+  font-family: "Marck Script", cursive;
+  margin: 10px;
+  width: 33%;
+  text-align: center;
+}
+.keepBack {
+  background-color: rgb(34, 34, 34);
+}
+.navbar {
+  align-items: center;
+  padding: 6px;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  color: rgb(143, 136, 136);
+  /* background-color: rgb(34, 34, 34); */
+  /* justify-content: space-around; */
+  position: sticky;
+  transition: 0.3s;
+  color: rgb(216, 210, 210);
+  top: 0;
+}
+.li {
+  transition: 0.3s ease;
+  display: inline-block;
+  list-style: none;
+  transition: 0.3s;
+  padding: 0px 8px;
+}
+.li a {
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 15px 8px;
+  text-decoration: none;
+  color: rgb(216, 210, 210);
+  transition: 0.3s ease;
+}
+
+/* .li:hover {
+  background-color: #555;
+  color: white;
+} */
+
+/* .li:hover a {
+  color: white;
+} */
+.li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+
+.li a:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+.tog {
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  display: none;
+  /* border: 1px solid white; */
+  flex-direction: column;
+  right: 1rem;
+  cursor: pointer;
+  /* background-color: rgb(34, 34, 34); */
+  top: 1.3rem;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.cls {
+  position: absolute;
+  top: 1rem;
+  display: none;
+  right: 1rem;
+}
+.menu {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hamb {
+  border-radius: 20px;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(216, 210, 210);
+}
+.login-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+}
+.login-btn {
+  background-color: #f3f3f3;
+  border: 1px solid #f3f3f3;
+  padding: 8px 17px;
+  margin: 0 5px;
+  color: black;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.login-btn:hover {
+  color: #f3f3f3;
+  background: transparent;
+  border: 1px solid #f3f3f3;
+}
+.cart-btn {
+  font-size: 22px;
+  margin: 0 14px;
+  cursor: pointer;
+  position: relative;
+}
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #f3f3f3;
+  padding: 10px;
+}
+.badge span {
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+}
+.logged-in {
+  cursor: pointer;
+  /* border: 1px solid #f3f3f3; */
+  padding: 8px 19px;
+  /* border-radius: 9px; */
+}
+.logged-in i {
+  margin-right: 8px;
+}
+@media (max-width: 1100px) {
+  .title {
+    text-align: left;
+  }
+  .login-cart {
+    justify-content: end;
+  }
+}
+
+.bump {
+  animation: bump 500ms ease;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@media (max-width: 980px) {
+  .navbar {
+    /* display: block; */
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .login-cart {
+    display: none;
+  }
+  .menu {
+    display: block;
+    width: auto;
+  }
+  .title {
+    width: auto;
+  }
+  /* .title {
+    text-align: left;
+    margin: 10px; 
+  } */
+  .li {
+    display: block;
+  }
+  /* .li a {
+    display: block;
+  } */
+  .tog {
+    display: flex;
+    top: 1rem;
+  }
+  .menu {
+    width: 100%;
+    height: 100vh;
+    /* display: none; */
+    position: absolute;
+    left: -100%;
+    top: 0;
+    /* z-index: 111; */
+    text-align: left;
+    padding-top: 5rem;
+    transition: 0.3s;
+    align-items: center;
+  }
+
+  .menu.active {
+    z-index: 111;
+    left: 0;
+    background-color: rgb(34, 34, 34);
+  }
+  /* .cls {
+    right: 1rem;
+  } */
+  .title {
+    font-size: 26px;
+  }
+  .li {
+    padding: 0 25px;
+  }
+  .li a {
+    font-size: 18px;
+  }
+  .li:hover {
+    background-color: #555;
+  }
+  .cls {
+    display: block;
+  }
+}
+
+/* @media (max-width: 500px) {
+  .li a {
+    font-size: 13px;
+  }
+} */
+@media (max-width: 400px) {
+  .title {
+    /* margin: 10px 0; */
+    font-size: 23px;
+  }
+  .tog {
+    height: 20px;
+    /* top: 1.2rem; */
+  }
+}

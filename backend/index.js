@@ -1,0 +1,23 @@
+const express = require("express");
+const app = express();
+const blouseRouter = require("./routes/blouse");
+const dressRouter = require("./routes/dress");
+const gownRouter = require("./routes/gown");
+const kurtiRouter = require("./routes/kurti");
+const cors = require("cors");
+const authRouter = require("./routes/auth");
+const cartRouter = require("./routes/cart");
+const orderRouter = require("./routes/order");
+const port = 3000;
+app.use(express.json());
+app.use(cors());
+app.use(blouseRouter);
+app.use(dressRouter);
+app.use(gownRouter);
+app.use(kurtiRouter);
+app.use(authRouter);
+app.use(cartRouter);
+app.use(orderRouter);
+app.listen(port, () => {
+  console.log("server started");
+});
